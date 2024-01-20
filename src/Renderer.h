@@ -40,11 +40,11 @@ private:
   const Context* context = nullptr;
   const Headset* headset = nullptr;
 
-  VkCommandPool commandPool = nullptr;
-  VkDescriptorPool descriptorPool = nullptr;
-  VkDescriptorSetLayout descriptorSetLayout = nullptr;
+  VkCommandPool commandPool = VK_NULL_HANDLE;
+  VkDescriptorPool descriptorPool = VK_NULL_HANDLE;
+  VkDescriptorSetLayout descriptorSetLayout = VK_NULL_HANDLE;
   std::vector<RenderProcess*> renderProcesses;
-  VkPipelineLayout pipelineLayout = nullptr;
+  VkPipelineLayout pipelineLayout = VK_NULL_HANDLE;
   Pipeline *gridPipeline = nullptr, *diffusePipeline = nullptr;
   DataBuffer* vertexIndexBuffer = nullptr;
   std::vector<Model*> models;

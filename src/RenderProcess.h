@@ -57,9 +57,9 @@ private:
 
   const Context* context = nullptr;
   VkCommandBuffer commandBuffer = nullptr;
-  VkSemaphore drawableSemaphore = nullptr, presentableSemaphore = nullptr;
-  VkFence busyFence = nullptr;
+  VkSemaphore drawableSemaphore = VK_NULL_HANDLE, presentableSemaphore = VK_NULL_HANDLE;
+  VkFence busyFence = VK_NULL_HANDLE;
   DataBuffer* uniformBuffer = nullptr;
   void* uniformBufferMemory = nullptr;
-  VkDescriptorSet descriptorSet = nullptr;
+  VkDescriptorSet descriptorSet = VK_NULL_HANDLE;
 };

@@ -27,7 +27,7 @@ private:
   bool valid = true;
 
   VkDevice device = nullptr;
-  VkImage image = nullptr;
-  VkImageView imageView = nullptr;
-  VkFramebuffer framebuffer = nullptr;
+  VkImage image = VK_NULL_HANDLE;
+  VkImageView imageView = VK_NULL_HANDLE;
+  VkFramebuffer framebuffer = VK_NULL_HANDLE;
 };

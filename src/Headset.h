@@ -60,9 +60,9 @@ private:
   std::vector<glm::mat4> eyeViewMatrices;
   std::vector<glm::mat4> eyeProjectionMatrices;
 
-  XrSession session = nullptr;
+  XrSession session = XR_NULL_HANDLE;
   XrSessionState sessionState = XR_SESSION_STATE_UNKNOWN;
-  XrSpace space = nullptr;
+  XrSpace space = XR_NULL_HANDLE;
   XrFrameState frameState = {};
   XrViewState viewState = {};
 
@@ -70,10 +70,10 @@ private:
   std::vector<XrView> eyePoses;
   std::vector<XrCompositionLayerProjectionView> eyeRenderInfos;
 
-  XrSwapchain swapchain = nullptr;
+  XrSwapchain swapchain = XR_NULL_HANDLE;
   std::vector<RenderTarget*> swapchainRenderTargets;
 
-  VkRenderPass renderPass = nullptr;
+  VkRenderPass renderPass = XR_NULL_HANDLE;
 
   ImageBuffer *colorBuffer = nullptr, *depthBuffer = nullptr;
 

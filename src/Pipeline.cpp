@@ -133,7 +133,7 @@ Pipeline::Pipeline(const Context* context,
   graphicsPipelineCreateInfo.pDynamicState = &pipelineDynamicStateCreateInfo;
   graphicsPipelineCreateInfo.pDepthStencilState = &pipelineDepthStencilStateCreateInfo;
   graphicsPipelineCreateInfo.renderPass = renderPass;
-  if (vkCreateGraphicsPipelines(device, nullptr, 1u, &graphicsPipelineCreateInfo, nullptr, &pipeline) != VK_SUCCESS)
+  if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1u, &graphicsPipelineCreateInfo, nullptr, &pipeline) != VK_SUCCESS)
   {
     util::error(Error::GenericVulkan);
     valid = false;

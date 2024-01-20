@@ -31,5 +31,5 @@ private:
   bool valid = true;
 
   const Context* context = nullptr;
-  VkPipeline pipeline = nullptr;
+  VkPipeline pipeline = VK_NULL_HANDLE;
 };

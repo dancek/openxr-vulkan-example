@@ -45,7 +45,7 @@ private:
   PFN_xrGetVulkanDeviceExtensionsKHR xrGetVulkanDeviceExtensionsKHR = nullptr;
   PFN_xrGetVulkanGraphicsRequirementsKHR xrGetVulkanGraphicsRequirementsKHR = nullptr;
 
-  XrInstance xrInstance = nullptr;
+  XrInstance xrInstance = VK_NULL_HANDLE;
   XrSystemId systemId = 0u;
 
   VkInstance vkInstance = nullptr;
@@ -59,10 +59,10 @@ private:
 #ifdef DEBUG
   PFN_xrCreateDebugUtilsMessengerEXT xrCreateDebugUtilsMessengerEXT = nullptr;
   PFN_xrDestroyDebugUtilsMessengerEXT xrDestroyDebugUtilsMessengerEXT = nullptr;
-  XrDebugUtilsMessengerEXT xrDebugUtilsMessenger = nullptr;
+  XrDebugUtilsMessengerEXT xrDebugUtilsMessenger = VK_NULL_HANDLE;
 
   PFN_vkCreateDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT = nullptr;
   PFN_vkDestroyDebugUtilsMessengerEXT vkDestroyDebugUtilsMessengerEXT = nullptr;
-  VkDebugUtilsMessengerEXT vkDebugUtilsMessenger = nullptr;
+  VkDebugUtilsMessengerEXT vkDebugUtilsMessenger = VK_NULL_HANDLE;
 #endif
 };

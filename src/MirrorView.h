@@ -47,8 +47,8 @@ private:
 
   GLFWwindow* window = nullptr;
 
-  VkSurfaceKHR surface = nullptr;
-  VkSwapchainKHR swapchain = nullptr;
+  VkSurfaceKHR surface = VK_NULL_HANDLE;
+  VkSwapchainKHR swapchain = VK_NULL_HANDLE;
   std::vector<VkImage> swapchainImages;
   VkExtent2D swapchainResolution = { 0u, 0u };
 

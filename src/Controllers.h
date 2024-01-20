@@ -28,13 +28,13 @@ public:
 private:
   bool valid = true;
 
-  XrSession session = nullptr;
+  XrSession session = XR_NULL_HANDLE;
   std::vector<XrPath> paths;
   std::vector<XrSpace> spaces;
 
   std::vector<glm::mat4> poses;
   std::vector<float> flySpeeds;
 
-  XrActionSet actionSet = nullptr;
-  XrAction poseAction = nullptr, flyAction = nullptr;
+  XrActionSet actionSet = XR_NULL_HANDLE;
+  XrAction poseAction = XR_NULL_HANDLE, flyAction = XR_NULL_HANDLE;
 };

@@ -29,7 +29,7 @@ private:
   bool valid = true;
 
   const Context* context = nullptr;
-  VkBuffer buffer = nullptr;
-  VkDeviceMemory deviceMemory = nullptr;
+  VkBuffer buffer = VK_NULL_HANDLE;
+  VkDeviceMemory deviceMemory = VK_NULL_HANDLE;
   VkDeviceSize size = 0u;
 };
